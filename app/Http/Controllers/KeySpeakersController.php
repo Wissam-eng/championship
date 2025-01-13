@@ -20,6 +20,7 @@ class KeySpeakersController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
+            'name' => 'sometimes|string|max:255',
             'title' => 'sometimes|string|max:255',
             'description' => 'sometimes|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
@@ -46,6 +47,7 @@ class KeySpeakersController extends Controller
 
             $Key_speakers = Key_speakers::create([
                 'title' => $request->input('title'),
+                'name' => $request->input('name'),
                 'description' => $request->input('description'),
                 'image' => $imagePath,
                 'file' => $filePath,
@@ -69,6 +71,7 @@ class KeySpeakersController extends Controller
         }
 
         $validator = Validator::make($request->all(), [
+            'name' => 'sometimes|string|max:255',
             'title' => 'sometimes|string|max:255',
             'description' => 'sometimes|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
