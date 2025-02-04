@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>VRISTO - Multipurpose Tailwind Dashboard Template</title>
+    <title>Championship</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="{{ url('resources/views/main/favicon.png') }}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -981,7 +981,7 @@
                                 <img class="inline w-8 ltr:-ml-1 rtl:-mr-1"
                                     src="{{ url('resources/views/main/assets/images/logo.svg') }}" alt="image" />
                                 <span
-                                    class="hidden align-middle text-2xl font-semibold transition-all duration-300 ltr:ml-1.5 rtl:mr-1.5 dark:text-white-light md:inline">VRISTO</span>
+                                    class="hidden align-middle text-2xl font-semibold transition-all duration-300 ltr:ml-1.5 rtl:mr-1.5 dark:text-white-light md:inline">Championship</span>
                             </a>
 
                             <a href="javascript:;"

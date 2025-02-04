@@ -57,7 +57,7 @@
 
                 </div>
 
-                <div class="py-7 px-6">
+                <div class="py-7 px-6" style="width: 100%;">
 
 
 
@@ -174,6 +174,9 @@
 
 
     <style>
+    h2{
+        overflow:auto;
+    }
         .card {
             display: flex;
             flex-wrap: wrap;
