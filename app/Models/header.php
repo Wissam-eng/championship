@@ -5,16 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class home extends Model
+class header extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'title',
-        'description',
-        'image',
-        'address',
-        'date',
-        'text',
-        'hijri_date',
+        'header_value1',
+        'header_value2',
+        'header_value3',
+        'header_value4',
+        'header_value5',
+        'header_value6',
     ];
 }

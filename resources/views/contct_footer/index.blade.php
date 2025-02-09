@@ -166,6 +166,15 @@
                     <hr>
 
 
+                    <div>
+                        <label for="ctnEmail">Newsletter</label>
+                        <h2 class="text-[#3b3f5c] text-lg font-semibold dark:text-white-light">
+                            {{ $item->Newsletter }}
+                        </h2>
+                    </div>
+                    <hr>
+
+
 
                 </div>
             </div>

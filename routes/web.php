@@ -18,6 +18,7 @@ use App\Http\Controllers\VideoGalleryController;
 use App\Http\Controllers\PartnersController;
 use App\Http\Controllers\RegisterInController;
 use App\Http\Controllers\ContctFooterController;
+use App\Http\Controllers\headercontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +52,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('profile', [HomeController::class, 'profile'])->name('profile');
 
     // RESTful resource routes
+    Route::resource('header', headercontroller::class);
     Route::resource('main', HomeController::class);
     Route::resource('goals', GoalsController::class);
     Route::resource('about', AboutController::class);

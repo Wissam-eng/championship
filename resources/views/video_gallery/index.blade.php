@@ -4,10 +4,10 @@
     {{-- @dd($main) --}}
 
 
-    @if (session('message'))
+    @if (session('success'))
         <div
             class="flex items-center p-3.5 rounded text-success bg-success-light dark:bg-success-dark-light text-align-center">
-            {{ session('message') }}
+            {{ session('success') }}
 
         </div>
     @endif
@@ -49,11 +49,19 @@
                     </a>
                 </div>
 
+
+
+
+
                 <div class="py-7 px-6">
                     <div class="-mt-7 mb-7 -mx-6 rounded-tl rounded-tr h-[215px] overflow-hidden">
                         <video src="{{ asset($item->video) }}" alt="video" class="w-full h-full object-cover"
                             controls></video>
                     </div>
+
+
+
+
 
                     <div style="display: flex;border: 1px solid black;height: 99px;" class="-mt-7 mb-7 -mx-6 rounded-tl rounded-tr h-[215px] overflow-hidden" style="border: 1px solid black;">
                         <input type="text" name="title" value="{{ $item->title }}" placeholder="Some Text..." class="form-input" disabled />
@@ -65,6 +73,11 @@
                     </div>
 
 
+                </div>
+
+                <div>
+                    <label for="ctnEmail">external_link_youtube</label>
+                    <input type="text" name="external_link" value="{{ $item->external_link }}" placeholder="Some Text..." class="form-input" disabled />
                 </div>
             </div>
         @endforeach

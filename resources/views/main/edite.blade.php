@@ -41,6 +41,13 @@
                 </h5>
                 <hr>
 
+
+                <div>
+                    <label for="ctnEmail">hijri_date</label>
+                    <input type="text" name="hijri_date" value="{{ $card->hijri_date }}" placeholder="Some Text..." class="form-input"  />
+                </div>
+                <hr>
+
                 <!-- النصوص الأخرى -->
                 <textarea class="text-white-dark fixed-height-textarea" disabled>
                             {{ $card->description }}
@@ -78,7 +85,10 @@
             </div>
 
 
-
+            <div>
+                <label for="ctnEmail">hijri_date</label>
+                <input type="text" name="hijri_date" value="{{ $card->hijri_date }}" placeholder="Some Text..." class="form-input"  />
+            </div>
 
             <div>
                 <label for="ctnTextarea">Description</label>

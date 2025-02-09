@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('images')->nullable();
             $table->string('video');
             $table->string('title');
+            $table->string('external_link')->nullable();
             $table->string('durtion')->nullable();
             $table->timestamps();
         });

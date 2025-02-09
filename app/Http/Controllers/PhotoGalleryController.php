@@ -83,8 +83,8 @@ class PhotoGalleryController extends Controller
         $validator = Validator::make($request->all(), [
             'title' => 'required|string|max:255',
             'images' => 'required|array|min:1',
-            'images.*' => 'image|mimes:jpeg,png,svg,webp,jpg,gif|max:2048',
-            'cover' => 'required|image|mimes:jpeg,svg,webp,png,jpg,gif|max:2048',
+            'images.*' => 'image|mimes:jpeg,png,svg,webp,jpg,gif|max:100000',
+            'cover' => 'required|image|mimes:jpeg,svg,webp,png,jpg,gif|max:100000',
         ]);
 
         if ($validator->fails()) {
@@ -137,8 +137,8 @@ class PhotoGalleryController extends Controller
         $validator = Validator::make($request->all(), [
             'title' => 'required|string|max:255',
             'images' => 'array|min:1',
-            'images.*' => 'image|mimes:jpeg,png,svg,webp,jpg,gif|max:2048',
-            'cover' => 'image|mimes:jpeg,png,svg,webp,jpg,gif|max:2048',
+            'images.*' => 'image|mimes:jpeg,png,svg,webp,jpg,gif|max:100000',
+            'cover' => 'image|mimes:jpeg,png,svg,webp,jpg,gif|max:100000',
         ]);
 
         if ($validator->fails()) {

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('address')->nullable();
             $table->string('date')->nullable();
             $table->string('text')->nullable();
-
+            $table->string('hijri_date')->nullable();
             $table->timestamps();
         });
     }
