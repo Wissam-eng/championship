@@ -19,6 +19,8 @@ use App\Http\Controllers\VideoGalleryController;
 use App\Http\Controllers\PartnersController;
 use App\Http\Controllers\RegisterInController;
 use App\Http\Controllers\ContctFooterController;
+use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\ContactusController;
 
 /*
 |--------------------------------------------------------------------------
@@ -138,7 +140,14 @@ Route::middleware('auth:api')->group(function () {
 });
 
 
+Route::post('newsletter', [NewsletterController::class , 'store'] )->name('newsletter');
+Route::post('contact', [ContactusController::class , 'store'] )->name('contact');
+
+
 Route::post('registerIn', [RegisterInController::class, 'store']);
+
+
+
 Route::post('registerIn/{id}', [RegisterInController::class, 'update']);
 
 //--------home
@@ -196,4 +205,4 @@ Route::get('contct_footer', [ContctFooterController::class, 'index']);
 
 //---------auth
 Route::post('/login', [AuthController::class, 'login']);
-Route::post('/register', [AuthController::class, 'register']);
+// Route::post('/register', [AuthController::class, 'register']);

@@ -10,6 +10,10 @@ class video_gallery extends Model
     use HasFactory;
     protected $fillable = [
 
+        'images',
         'video',
+        'title',
+        'duration',
+        'external_link',
     ];
 }
