@@ -1,7 +1,7 @@
 <?php
 namespace App\Exports;
 
-use App\Models\ContactUs;
+use App\Models\contactus;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithMapping;
@@ -10,7 +10,7 @@ class ContactUsExport implements FromCollection, WithHeadings, WithMapping
 {
     public function collection()
     {
-        return ContactUs::select('name', 'mobile', 'email', 'goal', 'created_at')->get();
+        return contactus::select('name', 'mobile', 'email', 'goal', 'created_at')->orderBy('created_at', 'desc')->get();
     }
 
     public function headings(): array

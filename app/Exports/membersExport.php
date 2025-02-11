@@ -24,7 +24,7 @@ class membersExport implements FromCollection, WithHeadings, WithMapping
             'job_title',
             'city',
             'created_at'
-        )->get();
+        )->orderBy('created_at', 'desc')->get();
     }
 
     public function headings(): array

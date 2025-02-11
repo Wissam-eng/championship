@@ -14,7 +14,7 @@ class newsletterExport implements FromCollection, WithHeadings, WithMapping
      */
     public function collection()
     {
-        return newsletter::select('email', 'created_at')->get();
+        return newsletter::select('email', 'created_at')->orderBy('created_at', 'desc')->get();
     }
 
     public function headings(): array

@@ -267,7 +267,8 @@ class HomeController extends Controller
             $imagePath = null;
             if ($request->hasFile('image')) {
                 $imagePath = $request->file('image')->store('images/main', 'public');
-                $imagePath = asset("storage/$imagePath");
+                $imagePath = 'storage/app/public/' . $imagePath;
+                $input['image'] = $imagePath;
             }
 
             $home = Home::create([
