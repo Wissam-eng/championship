@@ -43,8 +43,8 @@ class VideoGalleryController extends Controller
         $validator = Validator::make($request->all(), [
             'external_link' => 'required|string',
             'title' => 'required|string|max:255',
-            'video' => 'required|mimes:mp4,mov,avi,wmv,flv,mkv|max:10000',
-            'images' => 'required|image|mimes:jpeg,png,svg,webp,jpg,gif|max:2048',
+            'video' => 'nullable|mimes:mp4,mov,avi,wmv,flv,mkv|max:10000',
+            'images' => 'nullable|image|mimes:jpeg,png,svg,webp,jpg,gif|max:2048',
         ]);
 
         if ($validator->fails()) {
@@ -53,22 +53,22 @@ class VideoGalleryController extends Controller
 
         try {
 
-            $getID3 = new getID3();
+            // $getID3 = new getID3();
 
-            // تخزين الفيديو
-            $videoPath = $request->file('video')->store('video_gallery/video', 'public');
+            // // تخزين الفيديو
+            // $videoPath = $request->file('video')->store('video_gallery/video', 'public');
 
-            $fullVideoPath = 'storage/app/public/' . $videoPath;
-            // $fullVideoPath = storage_path('app/public/' . $videoPath);
+            // $fullVideoPath = 'storage/app/public/' . $videoPath;
+            // // $fullVideoPath = storage_path('app/public/' . $videoPath);
 
-            // الحصول على مدة الفيديو
-            $fileInfo = $getID3->analyze($fullVideoPath);
-            $duration = $fileInfo['playtime_seconds'] ?? 0;
+            // // الحصول على مدة الفيديو
+            // $fileInfo = $getID3->analyze($fullVideoPath);
+            // $duration = $fileInfo['playtime_seconds'] ?? 0;
 
-            // تخزين الصورة
-            $imagePath = $request->file('images')->store('video_gallery/imgs', 'public');
+            // // تخزين الصورة
+            // $imagePath = $request->file('images')->store('video_gallery/imgs', 'public');
 
-            $imagePath = 'storage/app/public/' . $imagePath;
+            // $imagePath = 'storage/app/public/' . $imagePath;
 
 
 
@@ -76,9 +76,9 @@ class VideoGalleryController extends Controller
             video_gallery::create([
                 'external_link' => $request->input('external_link'),
                 'title' => $request->input('title'),
-                'video' => $fullVideoPath,
-                'images' => $imagePath,
-                'duration' => round($duration),
+                // 'video' => $fullVideoPath,
+                // 'images' => $imagePath,
+                // 'duration' => round($duration),
             ]);
 
             return redirect()->route('video_gallery.index')->with('success', 'Data added successfully');

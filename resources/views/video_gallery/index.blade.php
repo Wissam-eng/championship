@@ -54,10 +54,10 @@
 
 
                 <div class="py-7 px-6">
-                    <div class="-mt-7 mb-7 -mx-6 rounded-tl rounded-tr h-[215px] overflow-hidden">
+                    {{-- <div class="-mt-7 mb-7 -mx-6 rounded-tl rounded-tr h-[215px] overflow-hidden">
                         <video src="{{ asset($item->video) }}" alt="video" class="w-full h-full object-cover"
                             controls></video>
-                    </div>
+                    </div> --}}
 
 
 
@@ -67,7 +67,6 @@
                         <input type="text" name="title" value="{{ $item->title }}" placeholder="Some Text..." class="form-input" disabled />
 
 
-                            <img style="height: 100px;" src="{{ asset($item->images) }}" alt="image"  />
 
 
                     </div>

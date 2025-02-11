@@ -5,16 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class home extends Model
+class newsletter extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'title',
-        'description',
-        'image',
-        'address',
-        'milad_date',
-        'text',
-        'hijri_date',
+        'email',
     ];
 }

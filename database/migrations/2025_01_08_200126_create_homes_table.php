@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('title')->nullable();
             $table->text('description')->nullable();
             $table->string('address')->nullable();
-            $table->string('date')->nullable();
+            $table->string('milad_date')->nullable();
             $table->string('text')->nullable();
             $table->string('hijri_date')->nullable();
             $table->timestamps();

@@ -80,8 +80,24 @@ class headercontroller extends Controller
 
 
         $header = header::find($id);
-        $header->title = $request->title;
-        $header->description = $request->description;
+
+        $headerData = array_filter([
+            'header_value1' => $request->input('header_value1'),
+            'header_value2' => $request->input('header_value2'),
+            'header_value3' => $request->input('header_value3'),
+            'header_value4' => $request->input('header_value4'),
+            'header_value5' => $request->input('header_value5'),
+            'header_value6' => $request->input('header_value6'),
+        ]);
+
+        $header->update([
+            'header_value1' => json_encode($headerData['header_value1']),
+            'header_value2' => json_encode($headerData['header_value2']),
+            'header_value3' => json_encode($headerData['header_value3']),
+            'header_value4' => json_encode($headerData['header_value4']),
+            'header_value5' => json_encode($headerData['header_value5']),
+            'header_value6' => json_encode($headerData['header_value6']),
+        ]);
         $header->save();
         return redirect()->route('header.index');
     }

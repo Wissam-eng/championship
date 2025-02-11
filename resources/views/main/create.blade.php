@@ -28,14 +28,15 @@
 
 
             <!-- basic -->
-            <div x-data="form">
-                <input id="basic" type="text" name="date" x-model="date1" class="form-input" />
+            <div >
+                <label for="ctnEmail">milad_date</label>
+                <input id="basic" type="text" name="milad_date"  placeholder="Some Text..." class="form-input" />
             </div>
 
-            <div>
+            {{-- <div>
                 <label for="ctnEmail">hijri_date</label>
                 <input type="text" name="hijri_date" placeholder="Some Text..." class="form-input" />
-            </div>
+            </div> --}}
 
 
             <div>

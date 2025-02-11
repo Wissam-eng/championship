@@ -78,15 +78,15 @@
                     <hr>
 
                     <h5 class="text-[#3b3f5c] text-lg font-semibold mb-4 dark:text-white-light fixed-height-subtitle">
-                        {{ $item->date }}
+                        {{ $item->milad_date }}
                     </h5>
                     <hr>
 
 
-                    <h5 class="text-[#3b3f5c] text-lg font-semibold mb-4 dark:text-white-light fixed-height-subtitle">
+                    {{-- <h5 class="text-[#3b3f5c] text-lg font-semibold mb-4 dark:text-white-light fixed-height-subtitle">
                         {{ $item->hijri_date }}
                     </h5>
-                    <hr>
+                    <hr> --}}
 
 
 

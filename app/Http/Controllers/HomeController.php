@@ -193,10 +193,12 @@ class HomeController extends Controller
                 ->groupBy('code')
                 ->map(function ($group) {
                     $cover = $group->first()->cover;
+                    $title = $group->first()->title;
 
                     $images = $group->pluck('image');
 
                     return [
+                        'title' => $title,
                         'cover' => $cover,
                         'images' => $images,
                     ];
@@ -242,8 +244,6 @@ class HomeController extends Controller
 
 
 
-
-
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -251,7 +251,7 @@ class HomeController extends Controller
             'description' => 'nullable|string',
             'image' => 'nullable|image|mimes:jpeg,svg,webp,png,jpg,gif|max:2048',
             'address' => 'nullable|string',
-            'date' => 'nullable|date',
+            'milad_date' => 'nullable|string',
             'text' => 'nullable|string',
             'hijri_date' => 'nullable|string',
         ]);
@@ -275,7 +275,7 @@ class HomeController extends Controller
                 'description' => $request->input('description'),
                 'image' => $imagePath,
                 'address' => $request->input('address'),
-                'date' => $request->input('date'),
+                'milad_date' => $request->input('milad_date'),
                 'text' => $request->input('text'),
                 'hijri_date' => $request->input('hijri_date'),
             ]);
@@ -292,6 +292,7 @@ class HomeController extends Controller
     public function update(Request $request, $id)
     {
 
+        // dd($request->all());
         $home = home::find($id);
 
         if (!$home) {
@@ -308,7 +309,7 @@ class HomeController extends Controller
             'address' => 'sometimes|string',
             'date' => 'sometimes|date',
             'text' => 'sometimes|string',
-            'hijri_date' => 'sometimes|string',
+            'milad_date' => 'sometimes|string',
         ]);
 
         if ($validator->fails()) {

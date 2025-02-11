@@ -61,6 +61,7 @@
                                         <td><span class="badge bg-success">{{ $value6[0] ?? 'N/A' }}</span></td>
                                         <td><span class="badge bg-success">{{ $value6[1] ?? 'N/A' }}</span></td>
                                         <td>
+                                            <a href="{{ route('header.edit', $member->id) }}" class="badge bg-warning shadow-md hover:bg-warning-dark">edit</a>
                                             <form id="delete-form-{{ $member->id }}" action="{{ route('header.destroy', $member->id) }}" method="POST" style="display: none;">
                                                 @csrf
                                                 @method('DELETE')
