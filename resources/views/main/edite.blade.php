@@ -37,16 +37,16 @@
                 <hr>
 
                 <h5 class="text-[#3b3f5c] text-lg font-semibold mb-4 dark:text-white-light fixed-height-subtitle">
-                    {{ $card->milad_date }}
+                    {{ $card->from }}
                 </h5>
                 <hr>
 
 
-                {{-- <div>
-                    <label for="ctnEmail">hijri_date</label>
-                    <input type="text" name="hijri_date" value="{{ $card->hijri_date }}" placeholder="Some Text..." class="form-input"  />
+                <div>
+                    <label for="ctnEmail">to</label>
+                    <input type="text" name="to" value="{{ $card->to }}" placeholder="Some Text..." class="form-input"  />
                 </div>
-                <hr> --}}
+                <hr>
 
                 <!-- النصوص الأخرى -->
                 <textarea class="text-white-dark fixed-height-textarea" disabled>
@@ -81,15 +81,15 @@
 
             <!-- basic -->
             <div >
-                <label for="ctnEmail">milad_date</label>
-                <input id="basic" type="text" name="milad_date" value="{{ $card->milad_date }}" class="form-input" />
+                <label for="ctnEmail">from</label>
+                <input id="basic" type="text" name="from" value="{{ $card->from }}" class="form-input" />
             </div>
 
 
-            {{-- <div>
-                <label for="ctnEmail">hijri_date</label>
-                <input type="text" name="hijri_date" value="{{ $card->hijri_date }}" placeholder="Some Text..." class="form-input"  />
-            </div> --}}
+            <div>
+                <label for="ctnEmail">to</label>
+                <input type="text" name="to" value="{{ $card->to }}" placeholder="Some Text..." class="form-input"  />
+            </div>
 
             <div>
                 <label for="ctnTextarea">Description</label>

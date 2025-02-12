@@ -251,9 +251,9 @@ class HomeController extends Controller
             'description' => 'nullable|string',
             'image' => 'nullable|image|mimes:jpeg,svg,webp,png,jpg,gif|max:2048',
             'address' => 'nullable|string',
-            'milad_date' => 'nullable|string',
+            'from' => 'nullable|string',
             'text' => 'nullable|string',
-            'hijri_date' => 'nullable|string',
+            'to' => 'nullable|string',
         ]);
 
         if ($validator->fails()) {
@@ -276,9 +276,9 @@ class HomeController extends Controller
                 'description' => $request->input('description'),
                 'image' => $imagePath,
                 'address' => $request->input('address'),
-                'milad_date' => $request->input('milad_date'),
+                'from' => $request->input('from'),
                 'text' => $request->input('text'),
-                'hijri_date' => $request->input('hijri_date'),
+                'to' => $request->input('to'),
             ]);
 
 
@@ -310,7 +310,8 @@ class HomeController extends Controller
             'address' => 'sometimes|string',
             'date' => 'sometimes|date',
             'text' => 'sometimes|string',
-            'milad_date' => 'sometimes|string',
+            'from' => 'sometimes|string',
+            'to' => 'sometimes|string',
         ]);
 
         if ($validator->fails()) {

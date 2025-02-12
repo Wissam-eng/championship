@@ -13,8 +13,8 @@ class home extends Model
         'description',
         'image',
         'address',
-        'milad_date',
+        'from',
         'text',
-        'hijri_date',
+        'to',
     ];
 }

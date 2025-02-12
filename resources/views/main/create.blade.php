@@ -29,14 +29,14 @@
 
             <!-- basic -->
             <div >
-                <label for="ctnEmail">milad_date</label>
-                <input id="basic" type="text" name="milad_date"  placeholder="Some Text..." class="form-input" />
+                <label for="ctnEmail">from</label>
+                <input id="basic" type="text" name="from"  placeholder="Some Text..." class="form-input" />
             </div>
 
-            {{-- <div>
-                <label for="ctnEmail">hijri_date</label>
-                <input type="text" name="hijri_date" placeholder="Some Text..." class="form-input" />
-            </div> --}}
+            <div>
+               <label for="ctnEmail">to</label>
+                <input type="text" name="to" placeholder="Some Text..." class="form-input" />
+            </div>
 
 
             <div>
