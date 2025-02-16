@@ -47,7 +47,7 @@ class PartnersController extends Controller
             'title' => 'nullable|string',
             'description' => 'nullable|string',
             'images' => 'required|array|min:1',
-            'images.*' => 'image|mimes:jpeg,png,jpg,gif|max:10000',
+            'images.*' => 'image|mimes:jpeg,png,webp,svg,jpg,gif|max:10000',
         ]);
 
         if ($validator->fails()) {

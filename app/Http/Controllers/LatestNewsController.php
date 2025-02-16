@@ -53,8 +53,8 @@ class LatestNewsController extends Controller
             'title' => 'sometimes|string|max:255',
             'description' => 'sometimes|string',
             'date' => 'sometimes|date',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10000',
-            'image2' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10000',
+            'image' => 'nullable|image|mimes:jpeg,png,webp,svg,jpg,gif|max:10000',
+            'image2' => 'nullable|image|mimes:jpeg,png,webp,svg,jpg,gif|max:10000',
         ]);
 
         if ($validator->fails()) {
@@ -101,8 +101,8 @@ class LatestNewsController extends Controller
             'title' => 'sometimes|string|max:255',
             'description' => 'sometimes|string',
             'date' => 'sometimes|date_format:Y-m-d',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10000',
-            'image2' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10000',
+            'image' => 'nullable|image|mimes:jpeg,png,webp,svg,jpg,gif|max:10000',
+            'image2' => 'nullable|image|mimes:jpeg,png,jpg,webp,svg,gif|max:10000',
         ]);
 
         if ($validator->fails()) {

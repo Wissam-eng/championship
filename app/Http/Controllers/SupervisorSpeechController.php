@@ -77,7 +77,7 @@ class SupervisorSpeechController extends Controller
         $validator = Validator::make($request->all(), [
             'title' => 'sometimes|string|max:255',
             'description' => 'sometimes|string',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10000',
+            'image' => 'nullable|image|mimes:jpeg,png,webp,svg,jpg,gif|max:10000',
         ]);
 
         if ($validator->fails()) {
