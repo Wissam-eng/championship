@@ -89,7 +89,13 @@
                     <hr>
 
 
+                    <h5 class="text-[#3b3f5c] text-lg font-semibold mb-4 dark:text-white-light fixed-height-subtitle">
+                        {{ $item->welcome }}
+                    </h5>
+                    <hr>
 
+
+                    
                     <!-- النصوص الأخرى -->
                     <textarea class="text-white-dark fixed-height-textarea" disabled>
                         {{ $item->description }}
